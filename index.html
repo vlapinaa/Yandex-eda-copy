@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Yandex Eda</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header">
+      <div class="header-container">
+        <img src="https://avatars.mds.yandex.net/get-bunker/994123/b78e4890b454976f74575e3ea79f24a5eeee5fd8/orig"
+          alt="logo" class="logo-img">
+        <div class="search-header">
+          <div class="search-header-input">
+            <div class="svg-search-container">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="svg-search">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </div>
+
+            <input type="text" placeholder="Search for restaurants, food or products" onfocus="this.placeholder=''"
+              onblur="this.placeholder='Search for restaurants, food or products'" class="search-header-input-tag">
+
+            <button class="search-header-button">
+              <span class="button-text">Search</span>
+            </button>
+          </div>
+
+          <button class="search-button-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="button-mobile-svg">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </button>
+
+          <button class="header-adress-container-mobile">
+            <div class="header-adress">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11.5" cy="8.5" r="5.5" />
+                <path d="M11.5 14v7" />
+              </svg>
+            </div>
+          </button>
+
+
+          <button class="header-adress-container">
+            <div class="header-adress">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11.5" cy="8.5" r="5.5" />
+                <path d="M11.5 14v7" />
+              </svg>
+
+              <span class="adress-text">Vesennyaya ulitsa, 11</span>
+
+              <img src="https://yastatic.net/s3/eda-front/www/assets/16.53.2/desktop.chevron-64415662ec95ae82661f.svg"
+                alt="arrow" class="arrow-adress">
+            </div>
+          </button>
+
+        </div>
+        <div class="header-right-block">
+          <button class="send-language">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="language-planet">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+            <span class="language-text">English</span>
+          </button>
+          <button class="auth">
+            <span>
+              Log in
+            </span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="block-text">
+      <h2>
+        Shops
+      </h2>
+      <button class="button-all">
+        <span>
+          All
+        </span>
+      </button>
+    </div>
+
+    <section class="shops-section">
+      <div class="container-shops">
+        <div class="shops-card magnit">
+          <img src="https://eda.yandex/images/3609085/2224ef8c976f325090b4f4f79777f35a.png" alt="" class="shops-img">
+          <div class="shops-section-element"></div>
+          <div class="shops-card-delivery">
+            <svg class="corner_icon">
+              <use href="#native-delivery2-dc162">
+                <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                  <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                  <path fill="#FFE033"
+                    d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                  </path>
+                  <path fill="#9E9B98"
+                    d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                  </path>
+                  <path fill="#D2D0CC"
+                    d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                  </path>
+                  <path fill="#E3CA3F"
+                    d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                  </path>
+                  <path fill="#F8D830"
+                    d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                  </path>
+                  <path fill="#FFE033"
+                    d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                  </path>
+                </symbol>
+              </use>
+            </svg>
+            <span class="card-delivery-text">
+              Tomorrow 12:00
+            </span>
+          </div>
+        </div>
+        <div class="shops-card metro">
+          <img src="https://eda.yandex/images/3483997/cb16b6df01da12ec50ca349912add308.png" alt="" class="shops-img">
+          <div class="shops-card-delivery">
+            <svg class="corner_icon">
+              <use href="#native-delivery2-dc162">
+                <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                  <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                  <path fill="#FFE033"
+                    d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                  </path>
+                  <path fill="#9E9B98"
+                    d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                  </path>
+                  <path fill="#D2D0CC"
+                    d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                  </path>
+                  <path fill="#E3CA3F"
+                    d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                  </path>
+                  <path fill="#F8D830"
+                    d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                  </path>
+                  <path fill="#FFE033"
+                    d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                  </path>
+                </symbol>
+              </use>
+            </svg>
+            <span class="card-delivery-text">
+              Today 22:00
+            </span>
+          </div>
+        </div>
+        <div class="shops-card magnit-cosmetic">
+          <img src="https://eda.yandex/images/3436037/34ea93bd8cd752638696d1ffaf6c4227.png" alt="" class="shops-img">
+          <div class="shops-card-delivery">
+            <svg class="corner_icon">
+              <use href="#native-delivery2-dc162">
+                <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                  <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                  <path fill="#FFE033"
+                    d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                  </path>
+                  <path fill="#9E9B98"
+                    d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                  </path>
+                  <path fill="#D2D0CC"
+                    d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                  </path>
+                  <path fill="#E3CA3F"
+                    d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                  </path>
+                  <path fill="#F8D830"
+                    d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                  </path>
+                  <path fill="#FFE033"
+                    d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                  </path>
+                </symbol>
+              </use>
+            </svg>
+            <span class="card-delivery-text">
+              15-20 min
+            </span>
+          </div>
+        </div>
+        <div class="shops-card pyaterochka">
+          <img src="https://eda.yandex/images/3420935/d19afc374d51704ebc95914e104c2054.png" alt="" class="shops-img">
+          <div class="shops-card-delivery">
+            <svg class="corner_icon">
+              <use href="#native-delivery2-dc162">
+                <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                  <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                  <path fill="#FFE033"
+                    d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                  </path>
+                  <path fill="#9E9B98"
+                    d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                  </path>
+                  <path fill="#D2D0CC"
+                    d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                  </path>
+                  <path fill="#E3CA3F"
+                    d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                  </path>
+                  <path fill="#F8D830"
+                    d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                  </path>
+                  <path fill="#FFE033"
+                    d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                  </path>
+                </symbol>
+              </use>
+            </svg>
+            <span class="card-delivery-text">
+              Tomorrow 12:00
+            </span>
+          </div>
+        </div>
+        <div class="shops-card flawery">
+          <img src="https://eda.yandex/images/3595381/1e95939b9fd5237d1556b25940c68310.png" alt="" class="shops-img">
+          <div class="shops-card-delivery">
+            <svg class="corner_icon">
+              <use href="#native-delivery2-dc162">
+                <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                  <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                  <path fill="#FFE033"
+                    d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                  </path>
+                  <path fill="#9E9B98"
+                    d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                  </path>
+                  <path fill="#D2D0CC"
+                    d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                  </path>
+                  <path fill="#E3CA3F"
+                    d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                  </path>
+                  <path fill="#F8D830"
+                    d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                  </path>
+                  <path fill="#FFE033"
+                    d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                  </path>
+                </symbol>
+              </use>
+            </svg>
+            <span class="card-delivery-text">
+              20-30 min
+            </span>
+          </div>
+        </div>
+      </div>
+      <button class="button-next">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="button-next-svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+    </section>
+
+    <div class="block-text">
+      <h2>
+        Restaurants
+      </h2>
+    </div>
+
+    <div class="restaurants-filters">
+      <nav class="nav-restaurants-filter">
+        <ul class="filter-eats">
+          <li class="filter-list-item filter-list-item-active">
+            <a href="#" class="link-filter">All</a>
+          </li>
+          <li class="filter-list-item">
+            <a href="#" class="link-filter">Carry-out</a>
+          </li>
+          <li class="filter-list-item">
+            <a href="#" class="link-filter">Burgers</a>
+          </li>
+          <li class="filter-list-item">
+            <a href="#" class="link-filter">Sushi</a>
+          </li>
+          <li class="filter-list-item">
+            <a href="#" class="link-filter">Pizza</a>
+          </li>
+          <li class="filter-list-item">
+            <a href="#" class="link-filter">Wok</a>
+          </li>
+          <li class="filter-list-item">
+            <a href="#" class="link-filter">Pasta</a>
+          </li>
+          <li class="filter-list-item">
+            <button class="link-filter">
+              <span class="link-filter-more">
+                More
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="filter-img-more">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="filter-block">
+        <button class="filter-delivery">
+          <span class="delivery-text">Delivery:</span>
+          <span class="delivery-text-now">
+            Now
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="filter-img-delivery">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+
+        <button class="filter-delivery">
+          <img src="https://yastatic.net/s3/eda-front/www/assets/16.53.2/desktop.slider_bar-f5b5df0938f1991ba835.svg"
+            alt="" class="text-sorting">
+          <span>Sorting</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="block-text-restaurants">
+      <h3>
+        Offers
+      </h3>
+    </div>
+
+    <section id="section" class="offers-section">
+      <ul class="offers-card-list">
+        <li class="offers-card-item">
+          <div class="block-img">
+            <fugure class="offers-img-container">
+              <img src="https://eda.yandex/images/1370147/3a5b0c59586a630f05c213ff9e95cfcc-450x300.png" alt=""
+                class="offers-img">
+              </figure>
+
+              <div class="free-delivery">
+                <div class="free-delivery-img-container">
+                  <div class="free-delivery-img"></div>
+                </div>
+
+                <span class="free-delivery-text">
+                  Free delivery
+                </span>
+              </div>
+
+              <div class="offers-card-delivery">
+                <svg class="corner_icon">
+                  <use href="#native-delivery2-dc162">
+                    <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                      <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                      <path fill="#FFE033"
+                        d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                      </path>
+                      <path fill="#9E9B98"
+                        d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                      </path>
+                      <path fill="#D2D0CC"
+                        d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                      </path>
+                      <path fill="#E3CA3F"
+                        d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                      </path>
+                      <path fill="#F8D830"
+                        d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                      </path>
+                      <path fill="#FFE033"
+                        d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                      </path>
+                    </symbol>
+                  </use>
+                </svg>
+                <span class="card-delivery-text">
+                  Today 20:00
+                </span>
+              </div>
+          </div>
+
+          <div class="offers-footer">
+            <span class="name-restaurant">
+              Теремок
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.7 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="offers-card-item">
+          <div class="block-img">
+            <div class="offers-img-container">
+              <img src="https://eda.yandex/images/1463280/0c2560a641db49ccb730d8a430b619ba-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                10-15 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer">
+            <span class="name-restaurant">
+              VЛAVAШE
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.8 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="offers-card-item">
+          <div class="block-img">
+            <div class="offers-img-container">
+              <img src="https://eda.yandex/images/3512182/a1d2068c9b1e7f28b9210a56c8d55db1-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                25-30 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer">
+            <span class="name-restaurant">
+              Carl’s Jr.
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.7 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="offers-card-item">
+          <div class="block-img">
+            <div class="offers-img-container">
+              <img src="https://eda.yandex/images/3806315/cec024e9026a2476e9cc731a0560ac09-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                20-30 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer">
+            <span class="name-restaurant">
+              Stars Coffee
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.9 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="offers-card-item">
+          <div class="block-img">
+            <div class="offers-img-container">
+              <img src="https://eda.yandex/images/1380298/9057ba70a760213ab552e93eebc57969-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                40-50 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer">
+            <span class="name-restaurant">
+              Шоколадница
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.7 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <button class="button-next next-offers">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="button-next-svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+
+    </section>
+
+    <div class="block-text-restaurants">
+      <h3>
+        All restaurants
+      </h3>
+    </div>
+
+    <section id="section" class="all-restaurant-section">
+      <ul class="active-card-list">
+        <li class="active-restaurants-item">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/1370147/3a5b0c59586a630f05c213ff9e95cfcc-450x300.png" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                Today 20:00
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Теремок
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.7 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/1463280/0c2560a641db49ccb730d8a430b619ba-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                10-15 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              VЛAVAШE
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.8 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item ">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/3512182/a1d2068c9b1e7f28b9210a56c8d55db1-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                25-30 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Carl’s Jr.
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.7 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/3806315/cec024e9026a2476e9cc731a0560ac09-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                20-30 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Stars Coffee
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.9 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/1380298/9057ba70a760213ab552e93eebc57969-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                40-50 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Шоколадница
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.7 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item ">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/2353725/455defacc92cd9493e8dc3ff94ad9601-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                40-50 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Бургер кинг
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.9 Great</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/2353725/81d81a1035a21cf7a64f8122d3a4f4e4-450x300.jpg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                40-50 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Subway
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.8 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/3724421/6f2f08dcfe935121fc72c6ee6e3a6508-450x300.JPG" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                25-30 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Вкусно – и точка
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.8 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+
+        <li class="active-restaurants-item ">
+          <div class="block-img">
+            <div class="offers-img-container active-restaurants-img">
+              <img src="https://eda.yandex/images/3709189/b8ccc4b8b96de76f32cea0cd7d83650b-450x300.jpeg" alt=""
+                class="offers-img">
+            </div>
+
+            <div class="free-delivery">
+              <div class="free-delivery-img-container">
+                <div class="free-delivery-img"></div>
+              </div>
+
+              <span class="free-delivery-text">
+                Free delivery
+              </span>
+            </div>
+
+            <div class="offers-card-delivery">
+              <svg class="corner_icon">
+                <use href="#native-delivery2-dc162">
+                  <symbol id="native-delivery2-dc162" fill="none" viewBox="0 0 24 24">
+                    <path fill="#D2D0CC" d="M13.935 3a1.732 1.732 0 1 0 0 3.465 1.732 1.732 0 0 0 0-3.465"></path>
+                    <path fill="#FFE033"
+                      d="M8.999 5.248H7.714c-.46 0-.873.28-1.044.707L5.08 9.93a1.125 1.125 0 0 0 .52 1.412l4.726 2.338 1.686-5.62.269-.902 1.418.901V6.935l-2.186-1.093a5.622 5.622 0 0 0-2.514-.594">
+                    </path>
+                    <path fill="#9E9B98"
+                      d="M15.408 10.867s2.153 1.266 2.49 1.42c.308.141.65.42.445.784-.206.363-.717.293-1.128.11-.464-.208-1.99-.901-2.304-1.074-.268-.148-.368-.206-.466-.358-.204-.318-.6-.88-.6-.88l-.708 2.812s1.109 1.336 2.024 2.89l1.349 2.731c.289.49.833 1.223.313 1.512-.622.346-1.027.06-1.472-.52l-2.214-3.575c-.855-1.352-2.122-1.723-2.249-1.914-.284-.431-.269-1.79-.127-2.518.083-.424.334-1.677.579-2.819l-1.493 1.145s-.583 2.202-.645 2.506c-.076.368-.34.988-.594.936-.314-.066-.59-.287-.52-.813l.49-3.293c.079-.244.206-.415.409-.532l2.285-1.945c.27-.152.433-.314.877-.314h.845c.55 0 .828.226 1.212 1.097.408.924 1.202 2.612 1.202 2.612">
+                    </path>
+                    <path fill="#D2D0CC"
+                      d="M10.382 14.243 9.826 16.8s-1.439 2.084-1.84 2.668c-.3.438-.526.972-.011 1.361.577.437.927-.067 1.227-.404.316-.403 1.024-1.33 1.816-2.33.21-.265.327-.489.416-.711.06-.15.996-2.745 1.14-3.142z">
+                    </path>
+                    <path fill="#E3CA3F"
+                      d="M15.204 9.408c-.213-.547-.575-1.395-.943-1.91-.231 1.038-.872 3.263-.595 3.817.24.48.976-.366 1.407-.933a1 1 0 0 0 .131-.974">
+                    </path>
+                    <path fill="#F8D830"
+                      d="m10.202 13.048 1.04-3.465 1.04-2.425c.23-.116.863-.5 1.417-.223s.874.994.66 1.955c-.23 1.04-.692 3.257-.692 3.811 0 .464.032.347.195.965.108.145.017.563-.163.577h-2.81c-1.125 0-1.033-.587-1.033-.587z">
+                    </path>
+                    <path fill="#FFE033"
+                      d="M10.895 9.93c-.554 0-1.155-1.617-1.386-2.426.462-.23 1.594-.693 2.426-.693.831 0 .808 1.155.692 1.733-.346.461-1.178 1.385-1.732 1.385z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="card-delivery-text">
+                40-50 min
+              </span>
+            </div>
+          </div>
+
+          <div class="offers-footer active-section-footer">
+            <span class="name-restaurant">
+              Rostic's
+            </span>
+            <div class="parameters-restaurant">
+              <svg class="StarIcon" style="color: rgb(72, 198, 0);">
+                <use href="#svg-sprite-1062552217">
+                  <symbol id="svg-sprite-1062552217" fill="none" viewBox="0 0 16 16">
+                    <path id="star-icon-root" fill="currentColor"
+                      d="M7.552.908a.5.5 0 0 1 .896 0l2.08 4.216a.5.5 0 0 0 .377.273l4.652.676a.5.5 0 0 1 .277.853l-3.366 3.281a.5.5 0 0 0-.144.443l.795 4.633a.5.5 0 0 1-.726.527l-4.16-2.188a.5.5 0 0 0-.466 0l-4.16 2.188a.5.5 0 0 1-.726-.527l.795-4.633a.5.5 0 0 0-.144-.443L.166 6.926a.5.5 0 0 1 .277-.853l4.652-.676a.5.5 0 0 0 .376-.273L7.551.908z">
+                    </path>
+                  </symbol>
+                </use>
+              </svg>
+              <span class="grade-restaurant">4.8 Good</span>
+              <span class="price-expensive">₽  </span>
+              <span class="price-cheap">₽  </span>
+              <span class="price-cheap">₽  </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <button class="support-button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 svg-support">
+      <path fill-rule="evenodd"
+        d="M4.804 21.644A6.707 6.707 0 0 0 6 21.75a6.721 6.721 0 0 0 3.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 0 1-.814 1.686.75.75 0 0 0 .44 1.223ZM8.25 10.875a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25ZM10.875 12a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z"
+        clip-rule="evenodd" />
+    </svg>
+  </button>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>

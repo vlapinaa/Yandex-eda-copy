@@ -1,0 +1,1081 @@
+$tablet: 640px;
+$desktop: 1280px;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+body {
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+}
+
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-align: inherit;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  background-color: #ffffff;
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 18px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 24px;
+  }
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: -0.025em;
+  color: #21201f;
+  margin: 0;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 35px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.025em;
+  color: #21201f;
+  margin: 0;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 25px;
+  }
+}
+
+.header {
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #d2d0cc;
+
+  @media screen and (min-width: $tablet) {
+    height: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 80px;
+  }
+}
+
+.logo-img {
+  height: 38px;
+  display: block;
+  margin-right: 15px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    height: 38px;
+    margin-right: 12px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 48px;
+    margin-right: 12px;
+  }
+}
+
+.search-header {
+  display: flex;
+  align-items: center;
+  height: 38px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    height: 48px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    height: 48px;
+  }
+}
+
+.search-button-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fce000;
+  border-radius: 14px;
+  height: 38px;
+  padding: 0 13px;
+  font-weight: 600;
+  font-size: 16px;
+
+  &:hover {
+    background-color: #f2d700;
+  }
+
+  .button-mobile-svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.header-adress-container-mobile {
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  background-color: #eeeeee;
+  margin-left: 15px;
+  padding: 0 13px;
+
+  .header-adress {
+    display: flex;
+    align-items: center;
+    height: 38px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.search-header-input {
+
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    border: 2px solid #fce000;
+    border-radius: 16px;
+    width: 250px;
+    height: 40px;
+
+    &:hover {
+      border: 2px solid #f2d700;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    border: 2px solid #fce000;
+    border-radius: 16px;
+    width: 450px;
+    height: 100%;
+
+    &:hover {
+      border: 2px solid #f2d700;
+    }
+  }
+
+  .search-header-button {
+
+    @media screen and (min-width: $tablet) {
+
+      background-color: #fce000;
+      border-top-right-radius: 14px;
+      border-bottom-right-radius: 14px;
+      height: auto;
+      padding: 0 12px;
+      font-weight: 600;
+      font-size: 12px;
+
+      &:hover {
+        background-color: #f2d700;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0 24px;
+      font-size: 15px;
+    }
+  }
+
+  .svg-search-container {
+
+    @media screen and (min-width: $tablet) {
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 100%;
+      color: #7e7e7e;
+      padding-left: 10px;
+    }
+
+    .svg-search {
+      width: 20px;
+      height: 20px;
+
+      @media screen and (min-width: $desktop) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+  }
+
+  .search-header-input-tag {
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 20px;
+      border: none;
+      background-color: #ffffff;
+
+      &::placeholder {
+        color: #adabaa;
+        font-size: 14px;
+        text-overflow: ellipsis;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-right: 30px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
+.header-adress-container {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    background-color: #eeeeee;
+    margin-left: 18px;
+    padding: 0 13px;
+    height: 38px;
+
+    &:hover {
+      background-color: #e7e6e4;
+    }
+
+    &:active {
+      .arrow-adress {
+        transform: rotate(-90deg);
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 24px;
+    padding: 0 18px;
+    height: 48px;
+  }
+
+  .header-adress {
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      font-size: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 15px;
+    }
+  }
+
+  .adress-text {
+    @media screen and (min-width: $tablet) {
+      padding: 0 10px 0 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0 20px 0 0;
+      font-weight: 600;
+    }
+  }
+
+  .arrow-adress {
+    transform: rotate(90deg);
+    transition: 0.2s ease-in-out;
+  }
+
+}
+
+
+.header-right-block {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+
+  .send-language {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 12px;
+    color: #21201F;
+    font-size: 10px;
+    font-weight: 600;
+
+    &:hover {
+      .language-planet {
+        color: #4b4b4b;
+      }
+
+      .language-text {
+        color: #4b4b4b;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-right: 20px;
+      font-size: 11px;
+      padding: 0 8px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 24px;
+      font-size: 12px;
+      padding: 0 8px;
+    }
+  }
+
+  .language-planet {
+    width: 23px;
+    height: 23px;
+
+    @media screen and (min-width: $tablet) {
+      width: 25px;
+      height: 25px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .auth {
+    background-color: #eeeeee;
+    border-radius: 14px;
+    padding: 13px 16px;
+    font-weight: 600;
+    font-size: 10px;
+
+    &:hover {
+      background-color: #e7e6e4;
+    }
+
+    @media screen and (min-width: $tablet) {
+      background-color: #eeeeee;
+      border-radius: 16px;
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      background-color: #eeeeee;
+      border-radius: 16px;
+      padding: 15px 26px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+
+}
+
+.support-button {
+
+  display: none;
+ 
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #fce000;
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 110;
+    box-shadow: 0 10px 20px 0 rgba(252, 224, 0, 0.43), 0 5px 10px 0 rgba(252, 224, 0, 0.28);
+  }
+}
+
+.svg-support {
+  width: 32px;
+  height: 32px;
+}
+
+
+.container {
+  max-width: 1150px;
+  padding-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 110px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 128px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.block-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.button-all {
+  padding: 8px 16px;
+  background-color: #eeeeee;
+  border-radius: 100px;
+  font-weight: 400;
+  font-size: 10px;
+
+  &:hover {
+    background-color: #e7e6e4;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 8px 16px;
+    background-color: #eeeeee;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 7px 16px;
+    background-color: #eeeeee;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 15px;
+  }
+}
+
+.container-shops {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+
+  @media screen and (min-width: $desktop) {
+    overflow-x: none;
+  }
+}
+
+.shops-section {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.shops-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  width: 150px;
+  height: 100px;
+  background-color: #ed0e00;
+  border-radius: 16px;
+  padding-bottom: 20px;
+  flex-shrink: 0;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 15px;
+    width: 200px;
+    height: 130px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 15px;
+    width: calc((1150px / 5) - 12px);
+    height: 130px;
+  }
+}
+
+.shops-card-delivery {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  max-width: 90%;
+  background-color: #0000008d;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  &::before {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    clip-path: polygon(100% 0, 90% 39%, 80% 59%, 63% 78%, 43% 89%, 0 100%, 100% 100%);
+    content: "";
+    background-color: #0000008d;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 7px 12px;
+  }
+}
+
+.card-delivery-text {
+  opacity: 100%;
+  color: white;
+  font-size: 8px;
+  font-weight: 600;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.corner_icon {
+  width: 18px;
+  height: 18px;
+
+  @media screen and (min-width: $tablet) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.magnit {
+  background-color: #ff0f00;
+}
+
+.pyaterochka {
+  background-color: #e52322;
+}
+
+.magnit-cosmetic {
+  background-color: #cd1280;
+}
+
+.metro {
+  background-color: #1a3c7b;
+}
+
+.flawery {
+  background-color: #67b346;
+}
+
+.button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 30%;
+  right: -18px;
+  box-shadow: 0 8px 20px rgba(117, 115, 111, 0.2);
+
+  &:hover {
+    background-color: #e7e6e5;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 46px;
+    height: 46px;
+  }
+
+  .button-next-svg {
+    width: 15px;
+    height: 15px;
+
+    @media screen and (min-width: $tablet) {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+.shops-img {
+  width: calc(80%);
+  border-radius: 20px;
+  padding: 0 5px;
+}
+
+.restaurants-filters {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #f5f4f2;
+  margin-bottom: 20px;
+  padding: 8px;
+  border-radius: 22px;
+  overflow-x: auto;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 24px;
+    overflow-x: none;
+  }
+}
+
+.text-sorting {
+  padding-right: 5px;
+
+  @media screen and (min-width: $tablet) {
+    padding-right: 8px;
+  }
+}
+
+.nav-restaurants-filter {
+  display: flex;
+  align-items: center;
+}
+
+.filter-eats {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list-item {
+  height: 100%;
+  font-size: 12px;
+  padding-left: 4px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+
+}
+
+.filter-list-item-active {
+  background-color: #ffffff;
+  border-radius: 18px;
+  padding: 0;
+}
+
+.filter-block {
+  display: flex;
+  font-size: 12px;
+  padding-left: 20px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    padding-left: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    padding-left: 0;
+  }
+}
+
+.link-filter {
+  display: flex;
+  align-content: center;
+  border-radius: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 10px 12px;
+  transition: background .2s ease;
+
+  &:hover {
+    background-color: #faf9f8;
+    transition: .2s ease;
+
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    padding: 15px 18px;
+  }
+}
+
+.link-filter-more {
+  display: flex;
+  align-items: center;
+
+  .filter-img-more {
+    width: 15px;
+    height: 15px;
+
+    @media screen and (min-width: $tablet) {
+      width: 19px;
+      height: 19px;
+    }
+  }
+}
+
+.filter-delivery {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 16px;
+
+  &:hover {
+    background-color: #faf9f8;
+    transition: .2s ease;
+  }
+
+}
+
+.delivery-text {
+  padding-right: 5px;
+  font-weight: 600;
+  font-size: 12px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+.filter-img-delivery {
+  width: 15px;
+  height: 15px;
+
+  @media screen and (min-width: $tablet) {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+.delivery-text-now {
+  font-size: 12px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+.block-text-restaurants {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.offers-section {
+  position: relative;
+}
+
+.offers-card-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 6px;
+
+  @media screen and (min-width: $desktop) {
+    overflow: visible;
+  }
+}
+
+.offers-card-item {
+  width: 150px;
+  flex-shrink: 0;
+
+  &:not(:last-of-type) {
+    margin-right: 12px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 200px;
+
+    &:not(:last-of-type) {
+      margin-right: 24px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% / 5) - (24px * 4 /5));
+
+    &:not(:last-of-type) {
+      margin-right: 24px;
+    }
+  }
+}
+
+.block-img {
+  position: relative;
+}
+
+.offers-img-container {
+  display: block;
+  height: 100px;
+  width: 100%;
+
+  @media screen and (min-width: $tablet) {
+    height: 120px;
+  }
+}
+
+.offers-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}
+
+.offers-card-delivery {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 12px;
+  max-width: 90%;
+  background-color: #0000008d;
+  border-radius: 16px;
+  border-top-right-radius: 0;
+
+  &::before {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    clip-path: polygon(100% 0, 90% 39%, 80% 59%, 63% 78%, 43% 89%, 0 100%, 100% 100%);
+    content: "";
+    background-color: #0000008d;
+  }
+}
+
+.free-delivery {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(255, 255, 255, 0.739);
+  padding: 4px;
+  width: 100px;
+  border-radius: 30px;
+
+  @media screen and (min-width: $tablet) {
+    width: 120px;
+  }
+}
+
+.free-delivery-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #5ac31a;
+  margin-right: 4px;
+  width: 18px;
+  height: 18px;
+
+  @media screen and (min-width: $tablet) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.free-delivery-img {
+  width: 12px;
+  height: 12px;
+  filter: invert(1);
+  background-image: url("https://avatars.mds.yandex.net/get-bunker/128809/8a437d76ad8ef449df0d4a09b3d3fcc045abd915/orig");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: $tablet) {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.free-delivery-text {
+  font-size: 10px;
+  font-weight: 700;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
+}
+
+.next-offers {
+  top: 25%;
+}
+
+.offers-footer {
+  padding-top: 5px;
+}
+
+.parameters-restaurant {
+  display: flex;
+  align-items: center;
+}
+
+.name-restaurant {
+  font-size: 18px;
+  font-weight: 700;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 15px;
+  }
+}
+
+.grade-restaurant {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 5px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+}
+
+.StarIcon {
+  width: 12px;
+  height: 12px;
+
+  @media screen and (min-width: $tablet) {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.price-expensive {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.1em;
+  margin-right: 2px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+}
+
+.price-cheap {
+  font-size: 12px;
+  font-weight: 500;
+  color: #aba8a6;
+  letter-spacing: -0.1em;
+  margin-right: 2px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+}
+
+.active-card-list {
+  list-style: none;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 28px;
+
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+
+.active-restaurants-item {
+  width: 100%;
+}
+
+.active-restaurants-img {
+  height: 150px;
+
+  @media screen and (min-width: $tablet) {
+    height: 210px;
+  }
+}
+
+.active-section-footer .parameters-restaurant {
+  margin-top: 5px;
+}
